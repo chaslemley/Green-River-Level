@@ -1,3 +1,3 @@
-require File.join(File.dirname(__FILE__), 'lib', 'di_url_shortener.rb')
+require File.join(File.dirname(__FILE__), 'green_scrape_sinatra.rb')
 
 run Sinatra::Application
