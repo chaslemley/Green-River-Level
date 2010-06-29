@@ -42,6 +42,7 @@ post '/' do
   @message << "In 2 days (#{Time.parse(text.children[6].text[0..9]).strftime('%a')}): #{text.children[6].text[27..-2]}" << "\n"
   
   @message
+  content_type 'application/xml'
   
   haml :index
 end
