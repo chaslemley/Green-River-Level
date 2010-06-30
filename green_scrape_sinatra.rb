@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'haml'
 
-get '/' do
+post '/' do
   doc = Nokogiri::HTML(open('http://boatingbeta.com/runs/flows/green'))
   
   text = doc.at_css("p:nth-child(7)")
