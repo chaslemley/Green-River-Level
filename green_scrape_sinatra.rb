@@ -18,6 +18,10 @@ post '/' do
       @message << "(#{day_of_week}) #{release_text}" << "\n"
     end
   end
+  
+  lake_level = "99.5"
+  
+  @message << "Lake Level: #{lake_level}"
 
   content_type 'application/xml'
   haml :index
