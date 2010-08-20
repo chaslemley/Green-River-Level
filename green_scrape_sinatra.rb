@@ -21,7 +21,7 @@ post '/' do
   
   lake_level = doc.at_css("p:nth-child(11) b:nth-child(1)").children[0].text
   
-  @message << "Lake Level: #{lake_level}"
+  @message << "Lake: #{lake_level}"
 
   content_type 'application/xml'
   haml :index
