@@ -9,7 +9,7 @@ post '/' do
   
   text = doc.at_css("p:nth-child(7)")
     
-  @message = ""
+  @message = "\n"
   
   [2,4,6].each do |index|
     if text.children[index]
@@ -19,7 +19,7 @@ post '/' do
     end
   end
   
-  lake_level = "99.5"
+  lake_level = doc.at_css("p:nth-child(11) b:nth-child(1)")
   
   @message << "Lake Level: #{lake_level}"
 
@@ -32,7 +32,7 @@ get '/' do
   
   text = doc.at_css("p:nth-child(7)")
   
-  @message = ""
+  @message = "\n"
       
   [2,4,6].each do |index|
     if text.children[index]
@@ -42,7 +42,7 @@ get '/' do
     end
   end
   
-  lake_level = "99.5"
+  lake_level = doc.at_css("p:nth-child(11) b:nth-child(1)")
   
   @message << "Lake Level: #{lake_level}"
 
