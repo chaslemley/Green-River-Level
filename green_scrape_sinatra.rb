@@ -15,7 +15,7 @@ post '/' do
     if text.children[index]
       day_of_week = Time.parse(text.children[index].text[0..9]).strftime('%a')
       release_text = text.children[index].text[14..-2]
-      @message << "(#{day_of_week}) #{release_text}" << "\n"
+      @message << "#{day_of_week} #{release_text}" << "\n"
     end
   end
   
