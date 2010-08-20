@@ -9,7 +9,7 @@ post '/' do
   
   text = doc.at_css("p:nth-child(7)")
     
-  @message = " \n"
+  @message = ""
   
   [2,4,6].each do |index|
     if text.children[index]
@@ -32,7 +32,7 @@ get '/' do
   
   text = doc.at_css("p:nth-child(7)")
   
-  @message = " \n"
+  @message = ""
       
   [2,4,6].each do |index|
     if text.children[index]
