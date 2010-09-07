@@ -50,6 +50,10 @@ get '/' do
   haml :index
 end
 
+get '/donate' do
+  haml :donate
+end
+
 __END__
 
 @@ index
@@ -57,3 +61,17 @@ __END__
 %Response
   %Sms
     = @message
+    
+@@ donate
+!!!
+%head
+  %title Green River SMS Level
+%body{:style => "text-align:center; font-family: Arial; margin-top: 240px"}
+  %p{:style => "font-size: 20px"} To get the current green river 3 day release schedule, send a text message to <strong>(706) 403-4950</strong>
+  %p{:style => "margin-top: 100px"} If you find this helpful, click the button below to donate $5, Thanks!
+  %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post"}
+    %input{:type => "hidden", :name => "cmd", :value => "_s-xclick"}
+    %input{:type => "hidden", :name => "hosted_button_id", :value => "KQXZPLSAX9WNU" }
+    %input{:type => "image", :src => "https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif", :border => "0", :name => "submit", :alt => "PayPal - The safer, easier way to pay online!"}
+    %img{:alt => "", :border => "0", :src => "https://www.paypal.com/en_US/i/scr/pixel.gif", :width => "1", :height => "1"}
+  %p{:style => "font-size: 10px; margin-top: 20px"} Standard text messaging rates apply.
