@@ -27,7 +27,7 @@ post '/' do
   haml :index
 end
 
-get '/' do
+get '/test' do
   doc = Nokogiri::HTML(open('http://boatingbeta.com/runs/flows/green'))
   
   text = doc.at_css("p:nth-child(7)")
@@ -50,7 +50,7 @@ get '/' do
   haml :index
 end
 
-get '/donate' do
+get '/' do
   haml :donate
 end
 
