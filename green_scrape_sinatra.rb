@@ -67,7 +67,7 @@ __END__
 %head
   %title Green River SMS Level
 %body{:style => "text-align:center; font-family: Arial; margin-top: 240px"}
-  %p{:style => "font-size: 20px"} To get the current green river 3 day release schedule, send a text message to <strong>(706) 403-4950</strong>
+  %p{:style => "font-size: 20px"} To get the current green river 3 day release schedule, send a text message to <strong>(706) 403-4950</strong>.
   %p{:style => "margin-top: 100px"} If you find this helpful, click the button below to donate $5, Thanks!
   %form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post"}
     %input{:type => "hidden", :name => "cmd", :value => "_s-xclick"}
